@@ -164,6 +164,7 @@ describe('HttpCorrelationContext', () => {
       const extractedSpanContext = getCorrelationContext(
         httpTraceContext.extract(Context.ROOT_CONTEXT, carrier, defaultGetter)
       );
+      console.log(extractedSpanContext);
       assert.deepStrictEqual(extractedSpanContext, undefined, testCase);
     });
   });
